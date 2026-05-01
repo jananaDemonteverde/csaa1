@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        .error { color: red; font-size: 0.85em; margin-left: 10px; }
+        .form-group { margin-bottom: 20px; }
+        label { font-weight: bold; display: block; margin-bottom: 5px; }
+        button[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button[type="submit"]:hover { background-color: #0056b3; }
+    </style>
+</head>
+<body>
+
+    <form id="registrationForm">
+        <!-- personal information -->
+        <div class="question">
+            <label>Full name:</label>
+            <input type="text" id="fullname"> <span id="fullnameError" class="error"></span>
+        </div>
+
+        <div class="question">
+            <label>Birthdate:</label>
+            <input type="date" id="birthdate"> <span id="birthdateError" class="error"></span>
+        </div>
+
+        <div class="question">
+            <label>Sex:</label>
+            <input type="radio" name="sex" value="male"> Male
+            <input type="radio" name="sex" value="female"> Female
+            <input type="radio" name="sex" value="other"> Other
+            <span id="sexError" class="error"></span>
+        </div>
+
+        <div class="question">
+            <label>Email:</label>
+            <input type="email" id="email"> <span id="emailError" class="error"></span>
+        </div>
+        <!-- account details -->
+        <div class="question">
+            <label>Username:</label>
+            <input type="text" id="username"> <span id="usernameError" class="error"></span>
+        </div>
+
+        <div class="question">
+            <label>Password:</label>
+            <input type="password" id="password"> <span id="passwordError" class="error"></span>
+        </div>
+
+        <div class="question">
+            <label>Confirm password:</label>
+            <input type="password" id="confirmPassword"> <span id="confirmPasswordError" class="error"></span>
+        </div>
+
+        <!-- topic questions -->
+        <div class="question">
+            <label>How would you like to help? (Select at least one):</label>
+            <input type="checkbox" name="volunteer_tasks" value="a">Social Media Awareness (Content Creation)<br>
+            <input type="checkbox" name="volunteer_tasks" value="b"> Community Outreach (Event Planning)<br>
+            <input type="checkbox" name="volunteer_tasks" value="c"> Research / Data Gathering <br>
+            <input type="checkbox" name="volunteer_tasks" value="d"> Fieldwork (Coastal cleanups, Reef monitoring)
+            <span id="checkboxError" class="error"></span>
+        </div>
+
+        <div class="question">
+            <label> How frequently would you like to help? (Select one):</label>
+            <select id="topicDropdown">
+                <option value="">Please select one</option>
+                <option value="">Weekly</option>
+                <option value="opt1">Monthly</option>
+                <option value="opt2">Occasionally (On-call)</option>
+            </select>
+            <span id="dropdownError" class="error"></span>
+        </div>
+
+        <div class="question">
+            <label>What motivates you to support the protection of Paradise Reef?</label>
+        <div><input type="checkbox" name="motivation" value="personal"> Personal connection to the area</div>
+        <div><input type="checkbox" name="motivation" value="passion"> Passion for marine conservation</div>
+        <div><input type="checkbox" name="motivation" value="concern"> Concern about infrastructure impact</div>
+        <div>
+            <input type="checkbox" name="motivation" value="other"> 
+            Other: <input type="text" name="otherMotivation" placeholder="Please specify">
+        </div>
+    
+    <span id="motivationError" class="error"></span>
+</div>
+    <!--Submit button-->
+        <button type="submit" id="submitBtn">Let's Restore Our Reefs!</button>
+    </form>
+
+    <script src="script.js"></script>
+    <a href="https://jananademonteverde.github.io/CalciumDemonteverde_1QProj_v1/index.html" class="button">Visit the original webpage</a>
+</body>
+</html>
